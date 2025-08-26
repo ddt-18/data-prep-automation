@@ -39,7 +39,7 @@ This Python automation takes any dataset from a folder and instantly produces:
 
 1. **Clone this repo**  
    ```bash
-   git clone https://github.com/ddt-18/your-repo-name.git
+   git clone https://github.com/ddt-18/data-prep-automation.git
 
 2. **Install dependencies** 
     ```bash
