@@ -1,31 +1,58 @@
-# 🐍 Excel Data Prep Automation  
+# 🪄 Excel Data Automation with Python  
 
-A Python script that automates dataset cleanup and profiling into two ready-to-use outputs:  
+Tired of manually summarizing and cleaning datasets in Excel?  
+This Python automation takes any dataset from a folder and instantly produces:  
 
-1. **Cleaned Dataset (Excel)**  
-   - Duplicate rows removed  
-   - Column names standardized (spaces → underscores)  
-   - Saved with timestamp  
+✅ A **Summary Excel file** (4 sheets):  
+- **Preview**: first 10 rows of the dataset  
+- **Dataset Info**: rows, columns, total missing values  
+- **Statistics**: descriptive stats (mean, std, quartiles, freq, unique, etc.)  
+- **Missing Values**: count of missing values per column  
 
-2. **Summary File (Excel, 4 sheets)**  
-   - **Preview:** first 10 rows of the dataset  
-   - **Dataset_Info:** rows, columns, total missing values  
-   - **Statistics:** descriptive stats for all columns (numeric + categorical)  
-   - **Missing_Values:** missing value count per column  
-
----
-
-## ✨ Features
-- **Dataset selection toggle:** choose one or more files from a folder interactively  
-- **Multiple formats supported:** CSV, XLS, XLSX  
-- **Consistent summaries across datasets**  
-- **Outputs saved with timestamped filenames**  
+✅ A **Cleaned Dataset**:  
+- Duplicate rows removed  
+- Missing values handled (numeric → mean, categorical → mode)  
+- Column names standardized  
+- Datetime columns correctly set  
 
 ---
 
-## 🚀 Usage
+## ⚡ Features  
+- **Dataset Selection Toggle** → pick one or multiple datasets from a folder  
+- **Automated Cleaning** → consistent formatting & missing value handling  
+- **Summary File Export** → quick overview for analysis  
+- **Future Roadmap**: automatic visualizations (charts with Seaborn/Matplotlib)  
 
-1. Clone this repo
+---
+
+## 📂 Example Datasets Tested On  
+- Sales Data Sample (Kaggle)  
+- Global Superstore (Kaggle)  
+- Adult Income Dataset (Kaggle)  
+- Wine Quality Dataset (Kaggle)  
+
+*(more datasets can be plugged in directly via the folder toggle)*  
+
+---
+
+## 🚀 Getting Started  
+
+1. **Clone this repo**  
    ```bash
-   git clone https://github.com/ddt-18/data-prep-automation.git
-   cd data-prep-automation
+   git clone https://github.com/your-username/your-repo-name.git
+
+2. **Install dependencies** 
+    ```bash
+    pip install pandas matplotlib seaborn openpyxl
+
+3. **Place your datasets (.csv or .xlsx) in the Datasets/ folder**
+
+4. **Run the script**
+    ```bash
+    python automation.py
+
+## 📸 Demo (placeholder)
+
+## 📜 License
+
+This project is licensed under the MIT License – use it, tweak it, share it.
