@@ -24,8 +24,7 @@ project/
 │
 ├── output/                # Auto-generated reports and cleaned data
 ├── your_datasets_folder/  # Place your CSV/Excel datasets here
-├── script.ipynb           # Notebook version with usage guide
-└── script.py              # Python script version
+└── script.ipynb           # Notebook version with usage guide
 ```
 ---
 
