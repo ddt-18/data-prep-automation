@@ -84,4 +84,4 @@ Instead, I iterated with AI tools to create a working version — and learned a 
 
 ## 📜 License
 
-This project is licensed under the MIT License – use it, tweak it, share it.
+This project is licensed under the [MIT License](LICENSE) – use it, tweak it, share it.  
