@@ -1,10 +1,23 @@
 # 📊 Data Cleaning & Profiling Automation
 
-A beginner-friendly Python project to **clean, profile, and visualize datasets** automatically.  
-This tool saves you time by generating:  
-- ✅ Cleaned Excel datasets  
-- 📊 Bar & Pie chart visualizations  
-- 🌐 Interactive [ydata-profiling](https://github.com/ydataai/ydata-profiling) HTML report  
+A beginner-friendly Python project to **automate data cleaning, visualization, and profiling for datasets of any size**. This tool streamlines exploratory data analysis, generating clean datasets, insightful charts, and interactive reports with minimal user input.  
+
+---
+
+## 🎯 Features
+
+- Data Cleaning: Handles missing values (drop or fill with mean/mode) and removes duplicates.
+
+- Visualizations: Generates bar charts (e.g., top categories) and pie charts (e.g., distributions) with automatic or manual column selection.
+  
+- Performance Optimization: Uses sampling (50,000 rows for datasets >150,000) for fast visualization of large datasets like ncr_ride_bookings.csv (150,000 rows).
+  
+- Profiling: Creates interactive HTML reports with ydata-profiling for quick insights.
+
+- Flexible Input: Supports CSV, Excel, JSON, and Parquet files with robust encoding handling.
+
+- Output: Saves cleaned datasets (CSV/Excel) and PNG plots in an organized output/ folder.
+
 
 ---
 
@@ -22,9 +35,9 @@ pip install pandas matplotlib seaborn ydata-profiling openpyxl
 ```
 project/
 │
-├── output/                # Auto-generated reports and cleaned data
-├── your_datasets_folder/  # Place your CSV/Excel datasets here
-└── script.ipynb           # Notebook version with usage guide
+├── output/                         # Auto-generated reports, cleaned data and plots
+├── datasets/                       # Place your CSV/Excel/JSON/Parquet datasets here
+└── data_cleaning_automation.ipynb    # Jupyter Notebook with usage guide
 ```
 ---
 
@@ -36,51 +49,60 @@ project/
 
 3. Run the script:
 ```
-jupyter notebook script.ipynb
+jupyter notebook data_cleaning_automation.ipynb
 ```
-4. Follow the prompts to:
-   - Select dataset(s)
-   - Choose cleaning options
-   - Decide visualization columns (or let it auto-select)
+4. Follow prompts:
+   - Select dataset(s) from your folder.
+   - Choose cleaning options (e.g., fill missing values, drop duplicates).
+   - Pick columns for bar/pie charts or let the script auto-select suitable ones.
+   - Specify sample size for large datasets (default: 50,000 rows for >150,000).
 
-5. Check the output/ folder for:
-   - 📑 Cleaned Excel file
-   - 🖼 PNG plots
-   - 🌐 HTML profiling report
+5. Check Outputs in output/:
+   - Cleaned dataset: <filename>_cleaned_<timestamp>.csv/xlsx
+   - Plots: <filename>_plots/bar_<column>.png, pie_<column>.png
+   - HTML report: <filename>_report_<date>.html
 
 ---
 
 ## 📝 Example Workflow
 
-Input: sales_data.csv
+Input: ncr_ride_bookings.csv (150,000 rows, ride-sharing data)
 
-Automation generates:
+Steps:
 
-- sales_data_cleaned_20250827.xlsx
-- sales_data_plots/ (bar/pie charts)
-- sales_data_report_20250827.html
+Select dataset and choose to fill missing values and drop duplicates.
+Pick Vehicle_Type, Pickup_Location for bar charts; Booking_Status, Payment_Method for pie charts.
+Use default sample size (50,000 rows) for fast visualization.
+
+Outputs:
+
+- output/ncr_ride_bookings_cleaned_20250902_XXXXXX.csv/xlsx
+- output/ncr_ride_bookings_plots/:
+   - bar_Vehicle_Type.png (top 10 vehicle types)
+   - bar_Pickup_Location.png (top 10 pickup locations)
+   - pie_Booking_Status.png (e.g., 70% Completed, 20% Cancelled)
+   - pie_Payment_Method.png (payment method distribution)
+- output/ncr_ride_bookings_report_20250902.html (interactive profiling report)
 
 ---
 
 ## 🙋 Honesty Note
 
 This project was built with AI assistance (ChatGPT + Grok).
-I’m still a beginner learning Python, and while I understand what each part does, I didn’t build everything from scratch.
-Instead, I iterated with AI tools to create a working version — and learned a lot along the way.
+As a beginner, I used AI to iterate on the script, learning Python, pandas, and visualization techniques along the way. I understand each component and tailored it to create a practical tool for data analysis.
 
-💡 Goal: Share this openly to help other beginners and to showcase my learning journey.
+💡 Goal: Share a clean, functional project to inspire other beginners and showcase my growth as a data analyst.
 
 ---
 
 ## 📌 Future Improvements
 
-- Add optional summary Excel reports
-- Support additional file formats
-- Automate integration with BI tools
+- Add summary statistics to Excel outputs (e.g., key metrics per column).
+- Integrate with SQL databases for querying cleaned data.
+- Automate data export to Power BI for dashboard creation.
+- Add support for more visualization types (e.g., line charts for trends).
 
 ---
-
-## 📸 Demo (placeholder)
 
 ## 📜 License
 
