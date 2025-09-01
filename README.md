@@ -6,17 +6,17 @@ A beginner-friendly Python project to **automate data cleaning, visualization, a
 
 ## 🎯 Features
 
-- Data Cleaning: Handles missing values (drop or fill with mean/mode) and removes duplicates.
+- **Data Cleaning**: Handles missing values (drop or fill with mean/mode) and removes duplicates.
 
-- Visualizations: Generates bar charts (e.g., top categories) and pie charts (e.g., distributions) with automatic or manual column selection.
+- **Visualizations**: Generates bar charts (e.g., top categories) and pie charts (e.g., distributions) with automatic or manual column selection.
   
-- Performance Optimization: Uses sampling (50,000 rows for datasets >150,000) for fast visualization of large datasets like ncr_ride_bookings.csv (150,000 rows).
+- **Performance Optimization**: Uses sampling (50,000 rows for datasets >150,000) for fast visualization of large datasets like ncr_ride_bookings.csv (150,000 rows).
   
-- Profiling: Creates interactive HTML reports with ydata-profiling for quick insights.
+- **Profiling**: Creates interactive HTML reports with ydata-profiling for quick insights.
 
-- Flexible Input: Supports CSV, Excel, JSON, and Parquet files with robust encoding handling.
+- **Flexible Input**: Supports CSV, Excel, JSON, and Parquet files with robust encoding handling.
 
-- Output: Saves cleaned datasets (CSV/Excel) and PNG plots in an organized output/ folder.
+- **Output**: Saves cleaned datasets (CSV/Excel) and PNG plots in an organized output/ folder.
 
 
 ---
