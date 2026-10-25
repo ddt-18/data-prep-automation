@@ -1,0 +1,19 @@
+# Pinned dependencies for a reproducible install.
+#
+# Run from the project root:
+#     pip install -r requirements.txt
+#
+# These versions are the ones the automated tests were run against.
+# The code is also tested against pandas 3.x (the version you get from a plain
+# `pip install pandas`); to try that:
+#     pip install "pandas>=3,<4" && python -m pytest -q
+pandas==2.2.3
+matplotlib==3.10.0
+openpyxl==3.1.5        # .xlsx export
+pyarrow==26.0.0        # .parquet support
+xlrd==2.0.2            # legacy .xls support
+ydata-profiling==4.18.4
+pytest==9.1.1          # tests
+
+# Install this project (the src/data_prep package) in editable mode.
+-e .
