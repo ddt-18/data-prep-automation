@@ -179,3 +179,20 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+# ---------------------------------------------------------------------------
+# Data files and generated outputs for this project.
+# Datasets and reports contain real data (an HTML report embeds sample rows),
+# so they must never be committed to a public repository.
+# ---------------------------------------------------------------------------
+output/
+Datasets/
+datasets/
+data/
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.html
+*.png
+~$*
+.DS_Store
